@@ -1,0 +1,92 @@
+.tr-card {
+  width: 47rem;
+  height: 23rem;
+  position: relative;
+  .tr-card-img {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.5s;
+    height: 100%;
+    .tr-img {
+      display: block;
+      height: 100%;
+      transition: inherit;
+    }
+    .tr-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include flexHr;
+      justify-content: center;
+      gap: 1.9rem;
+      cursor: pointer;
+      opacity: 0;
+      transition: inherit;
+      border-radius: 2.85rem;
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 0.9rem 2.4rem 0.9rem 0.9rem;
+    }
+  }
+  .tr-card-img:hover {
+    .tr-img {
+      filter: brightness(50%);
+    }
+    .tr-play {
+      opacity: 1;
+    }
+  }
+  .tr-bookmark-container {
+    cursor: pointer;
+    padding: 1.6rem;
+    background-color: rgba(16, 20, 30, 0.5);
+    position: absolute;
+    top: 1.6rem;
+    right: 2.4rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+    .tr-icon-bookmark {
+      transition: all 0.5s;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .tr-bookmark-container:hover {
+    background-color: #fff;
+    .icon-bookmark {
+      stroke: $darkblue;
+    }
+  }
+  .tr-dot {
+    width: 3px;
+    height: 3px;
+    background-color: #979797;
+    border-radius: 50%;
+  }
+  .tr-card-descr {
+    padding-top: 0.8rem;
+    position: absolute;
+    bottom: 2.4rem;
+    left: 2.4rem;
+    .tr-card-info {
+      @include flexHr;
+      gap: 0.8rem;
+      .tr-category-container {
+        @include flexHr;
+        flex-grow: 0;
+        gap: 0.6rem;
+        .tr-icon-category {
+          height: fit-content;
+        }
+      }
+    }
+    .tr-card-title {
+      padding-top: 0.5rem;
+      text-align: left;
+    }
+  }
+}

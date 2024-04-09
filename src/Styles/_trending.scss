@@ -1,0 +1,8 @@
+.trending {
+  margin-bottom: 4rem;
+}
+
+.trending-cards {
+  @include flexHr;
+  gap: 4rem;
+}
