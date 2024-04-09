@@ -1,8 +1,12 @@
 .trending {
   margin-bottom: 4rem;
-}
-
-.trending-cards {
-  @include flexHr;
-  gap: 4rem;
+  .trending-heading {
+    margin-bottom: 2.5rem;
+  }
+  .trending-cards {
+    @include flexHr;
+    gap: 4rem;
+    overflow: clip;
+    // overflow-clip-margin: 4rem;
+  }
 }

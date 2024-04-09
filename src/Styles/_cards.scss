@@ -6,4 +6,6 @@ $semidarkblue: #161d2f;
 .cards {
   @include grid(4);
   row-gap: 3.2rem;
+  column-gap: 4rem;
+  width: 100%;
 }

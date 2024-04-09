@@ -1,5 +1,5 @@
-import SearchBar from "./searchbar.jsx";
-import Content from "./content.jsx";
+import SearchBar from "./SearchBar.jsx";
+import Content from "./Content.jsx";
 
 export default function Main() {
   return (

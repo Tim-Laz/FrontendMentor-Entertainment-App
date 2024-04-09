@@ -1,28 +1,31 @@
 export default function Navbar() {
+  const iconSrc = [
+    "-nav-home",
+    "-nav-movies",
+    "-nav-tv-series",
+    "-nav-bookmark",
+  ];
+  const menu = iconSrc.map((icon) => (
+    <li key={icon} className="menu-item">
+      <a className="menu-link" href="#">
+        <svg fill="#5A698F" width={20} height={20}>
+          <use xlinkHref={`./assets/sprites.svg#icon${icon}`}></use>
+        </svg>
+      </a>
+    </li>
+  ));
+
   return (
     <nav className="navbar">
       <div className="logo">
         <img src="./assets/logo.svg" alt="" />
       </div>
-      <div className="menu">
-        <ul className="menu-items">
-          <li className="menu-item">
-            <img src="./assets/icon-nav-home.svg" alt="home" />
-          </li>
-          <li className="menu-item">
-            <img src="./assets/icon-nav-movies.svg" alt="search" />
-          </li>
-          <li className="menu-item">
-            <img src="./assets/icon-nav-tv-series.svg" alt="" />
-          </li>
-          <li className="menu-item">
-            <img src="./assets/icon-nav-bookmark.svg" alt="" />
-          </li>
-        </ul>
-      </div>
-      <div className="profile">
-        <img src="./assets/image-avatar.png" alt="" />
-      </div>
+      <ul className="menu">
+        {menu}
+        <li className="menu-item">
+          <img className="avatar-img" src="./assets/image-avatar.png" alt="" />
+        </li>
+      </ul>
     </nav>
   );
 }

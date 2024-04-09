@@ -3,11 +3,15 @@ export default function SearchBar() {
     <div className="searchbar">
       <form action="">
         <div className="search-container">
-          <img src="./assets/icon-search.svg" alt="search" />
+          <img
+            className="search-icon"
+            src="./assets/icon-search.svg"
+            alt="search"
+          />
           <input
-            className="search-input"
+            className="search-input hM"
             type="text"
-            placeholder="Search for movies or tv series"
+            placeholder="Search for movies or TV series"
           />
         </div>
       </form>

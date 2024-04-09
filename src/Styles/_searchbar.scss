@@ -1,0 +1,25 @@
+.searchbar {
+  padding-top: 3.2rem;
+  margin-bottom: 2rem;
+  .search-container {
+    @include flexHr;
+    gap: 2.4rem;
+    .search-icon {
+      padding-bottom: 1.4rem;
+    }
+    .search-input {
+      font-family: inherit;
+      border: none;
+      background-color: inherit;
+      width: 100%;
+      color: #fff;
+      padding-bottom: 1.4rem;
+    }
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 1px 0 0 $greyishblue;
+      caret-color: red;
+    }
+  }
+}
+/* Search for movies or */

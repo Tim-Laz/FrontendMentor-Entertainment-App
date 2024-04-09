@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed;
+  @include flexVr;
+  background-color: $semidarkblue;
+  padding: 3.5rem 2.8rem 3.2rem;
+  height: calc(100vh - 6.4rem);
+  border-radius: 20px;
+}
+
+.logo {
+  margin-bottom: 7.5rem;
+}
+
+.menu {
+  @include flexVr;
+  height: 100%;
+  gap: 4rem;
+
+  .menu-item {
+    use {
+      width: 2rem;
+      height: 2rem;
+    }
+    .menu-link {
+      svg {
+        transition: all 0.5s;
+      }
+    }
+    .menu-link:hover {
+      svg {
+        fill: #fc4747;
+      }
+    }
+  }
+  .menu-item:last-child {
+    margin-top: auto;
+    .avatar-img {
+      max-width: 4rem;
+    }
+  }
+}

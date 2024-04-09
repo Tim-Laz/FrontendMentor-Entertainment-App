@@ -11,7 +11,6 @@ export default function TrendingCard({
       <div className="tr-card-img">
         <picture className="tr-img">
           <source srcSet={src.large} media="(min-width: 768px)" />
-          <source srcSet={src.medium} media="(min-width: 376px)" />
           <img className="tr-img" src={src.small} alt={title} />
         </picture>
         <a href="#" className="tr-play">

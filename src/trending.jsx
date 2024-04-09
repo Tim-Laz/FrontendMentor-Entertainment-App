@@ -1,10 +1,10 @@
-import TrendingCard from "./trendingCard";
+import TrendingCard from "./TrendingCard";
 import Data from "../data.json";
 
 export default function Trending() {
   return (
     <div className="trending">
-      <h1 className="hL">Trending</h1>
+      <h1 className="trending-heading hL">Trending</h1>
       <div className="trending-cards">
         {Data.filter((item) => item.isTrending).map((item) => (
           <TrendingCard
@@ -13,7 +13,7 @@ export default function Trending() {
             year={item.year}
             category={item.category}
             rating={item.rating}
-            src={item.thumbnail.regular}
+            src={item.thumbnail.trending}
             bookmarked={item.isBookmarked}
           />
         ))}
