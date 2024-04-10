@@ -26,8 +26,14 @@ export function useMediaDispatch() {
 
 function mediaReducer(media, action) {
   switch (action.type) {
-    case "todo": {
-      return media;
+    case "bookmark": {
+      const newMedia = media.map((item) => {
+        if (item.title === action.title) {
+          return { ...item, isBookmarked: !item.isBookmarked };
+        }
+        return item;
+      });
+      return newMedia;
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);

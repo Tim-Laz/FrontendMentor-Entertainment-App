@@ -1,3 +1,5 @@
+import { useMediaDispatch } from "./MediaContext";
+
 export default function Card({
   title,
   year,
@@ -6,6 +8,12 @@ export default function Card({
   src,
   bookmarked,
 }) {
+  const dispatch = useMediaDispatch();
+  function toggleBookmark() {
+    dispatch({ type: "bookmark", title: title });
+    console.log("toggled");
+  }
+
   return (
     <div className="card">
       <div className="card-img">
@@ -19,7 +27,7 @@ export default function Card({
           <p className="hXS play-text">Play</p>
         </a>
       </div>
-      <div className="bookmark-container">
+      <div onClick={() => toggleBookmark()} className="bookmark-container">
         <svg stroke="white" width={11.67} height={12} className="icon-bookmark">
           {bookmarked ? (
             <use xlinkHref="./assets/sprites.svg#icon-bookmark-full"></use>

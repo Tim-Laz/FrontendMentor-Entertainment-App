@@ -1,15 +1,16 @@
-export default function Navbar() {
-  const iconSrc = [
-    "-nav-home",
-    "-nav-movies",
-    "-nav-tv-series",
-    "-nav-bookmark",
-  ];
+export default function Navbar({ category, setCategory }) {
+  const iconSrc = ["home", "movies", "tv-series", "bookmark"];
+  const activeClass = "active-icon";
+  const inactiveClass = "inactive-icon";
   const menu = iconSrc.map((icon) => (
     <li key={icon} className="menu-item">
-      <a className="menu-link" href="#">
-        <svg fill="#5A698F" width={20} height={20}>
-          <use xlinkHref={`./assets/sprites.svg#icon${icon}`}></use>
+      <a onClick={() => setCategory(icon)} className="menu-link" href="#">
+        <svg
+          className={category === icon ? activeClass : inactiveClass}
+          width={20}
+          height={20}
+        >
+          <use xlinkHref={`./assets/sprites.svg#icon-nav-${icon}`}></use>
         </svg>
       </a>
     </li>

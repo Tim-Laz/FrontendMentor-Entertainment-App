@@ -25,6 +25,14 @@
       svg {
         transition: all 0.5s;
       }
+
+      .inactive-icon {
+        fill: #5a698f;
+      }
+
+      .active-icon {
+        fill: #fff;
+      }
     }
     .menu-link:hover {
       svg {

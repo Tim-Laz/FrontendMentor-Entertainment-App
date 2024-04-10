@@ -4,10 +4,10 @@ import { useMedia } from "./MediaContext.jsx";
 export default function Bookmarked() {
   const media = useMedia();
   const bookmarkedMovs = media.filter((item) => {
-    return (item.category = "Movie" && item.isBookmarked);
+    return item.category === "Movie" && item.isBookmarked;
   });
   const bookmarkedTvs = media.filter((item) => {
-    return (item.category = "TV Series" && item.isBookmarked);
+    return item.category === "TV Series" && item.isBookmarked;
   });
   return (
     <div className="bookmarked">

@@ -1,3 +1,5 @@
+import { useMediaDispatch } from "./MediaContext";
+
 export default function TrendingCard({
   title,
   year,
@@ -6,6 +8,12 @@ export default function TrendingCard({
   src,
   bookmarked,
 }) {
+  const dispatch = useMediaDispatch();
+  function toggleBookmark() {
+    dispatch({ type: "bookmark", title: title });
+    console.log("toggled");
+  }
+
   return (
     <div className="tr-card">
       <div className="tr-card-img">
@@ -22,7 +30,7 @@ export default function TrendingCard({
           <p className="hXS tr-play-text">Play</p>
         </a>
       </div>
-      <div className="tr-bookmark-container">
+      <div onClick={() => toggleBookmark()} className="tr-bookmark-container">
         <svg
           stroke="white"
           width={11.67}

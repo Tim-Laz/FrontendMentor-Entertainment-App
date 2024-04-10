@@ -4,11 +4,14 @@ import { useMedia } from "./MediaContext.jsx";
 
 export default function Home() {
   const media = useMedia();
+  const trendingMedia = media.filter((item) => item.isTrending);
+  const normalMedia = media.filter((item) => !item.isTrending);
+  console.log(media);
   return (
     <div className="home">
-      <Trending />
+      <Trending media={trendingMedia} />
       <h1 className="home-heading hL">Recommended for you</h1>
-      <Cards media={media} />
+      <Cards media={normalMedia} />
     </div>
   );
 }

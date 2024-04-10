@@ -3,20 +3,22 @@ import Bookmarked from "./Bookmarked.jsx";
 import MovSeries from "./MovSeries.jsx";
 import SearchResults from "./SearchResults.jsx";
 
-export default function Content() {
-  let temp = "home";
+export default function Content({ category }) {
+  let temp = "notsearching";
   if (temp !== "searching") {
     return (
       <div className="content">
-        {temp === "home" && <Home />}
-        {temp === "bookmarked" && <Bookmarked />}
-        {(temp === "movies" || temp === "series") && <MovSeries temp={temp} />}
+        {category === "home" && <Home />}
+        {(category === "movies" || category === "tv-series") && (
+          <MovSeries category={category} />
+        )}
+        {category === "bookmark" && <Bookmarked />}
       </div>
     );
   } else {
     return (
       <div className="content">
-        <SearchResults temp={temp} searchString="earth" />
+        <SearchResults category={category} searchString="earth" />
       </div>
     );
   }
