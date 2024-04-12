@@ -1,21 +1,17 @@
 import { useMediaDispatch } from "./MediaContext";
+import { forwardRef } from "react";
 
-export default function TrendingCard({
-  title,
-  year,
-  category,
-  rating,
-  src,
-  bookmarked,
-}) {
+export default forwardRef(function TrendingCard(
+  { title, year, category, rating, src, bookmarked },
+  ref
+) {
   const dispatch = useMediaDispatch();
   function toggleBookmark() {
     dispatch({ type: "bookmark", title: title });
-    console.log("toggled");
   }
 
   return (
-    <div className="tr-card">
+    <div ref={ref} className="embla__slide tr-card">
       <div className="tr-card-img">
         <picture className="tr-img">
           <source srcSet={src.large} media="(min-width: 768px)" />
@@ -72,4 +68,4 @@ export default function TrendingCard({
       </div>
     </div>
   );
-}
+});

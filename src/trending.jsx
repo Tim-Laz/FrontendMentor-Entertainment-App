@@ -1,13 +1,25 @@
 import TrendingCard from "./TrendingCard";
+import { useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function Trending({ media }) {
+  const trendingMedia = media.filter((item) => item.isTrending);
+  // const cardsCount = trendingMedia.length;
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true });
+
+  useEffect(() => {
+    if (emblaApi) {
+      console.log(emblaApi.slideNodes()); // Access API
+    }
+  }, [emblaApi]);
+
   return (
-    <div className="trending">
+    <div className="slider">
       <h1 className="trending-heading hL">Trending</h1>
-      <div className="trending-cards">
-        {media
-          .filter((item) => item.isTrending)
-          .map((item) => (
+      <div className="embla slider-list" ref={emblaRef}>
+        <div className="embla__container slider-track">
+          {trendingMedia.map((item) => (
             <TrendingCard
               key={item.title}
               title={item.title}
@@ -18,6 +30,7 @@ export default function Trending({ media }) {
               bookmarked={item.isBookmarked}
             />
           ))}
+        </div>
       </div>
     </div>
   );

@@ -5,45 +5,71 @@
   padding: 3.5rem 2.8rem 3.2rem;
   height: calc(100vh - 6.4rem);
   border-radius: 20px;
-}
 
-.logo {
-  margin-bottom: 7.5rem;
-}
+  .logo {
+    margin-bottom: 7.5rem;
+  }
 
-.menu {
-  @include flexVr;
-  height: 100%;
-  gap: 4rem;
+  .menu {
+    @include flexVr;
+    height: 100%;
+    gap: 4rem;
 
-  .menu-item {
-    use {
-      width: 2rem;
-      height: 2rem;
-    }
-    .menu-link {
-      svg {
-        transition: all 0.5s;
+    .menu-item {
+      use {
+        width: 2rem;
+        height: 2rem;
       }
+      .menu-link {
+        svg {
+          transition: all 0.5s;
+        }
 
-      .inactive-icon {
-        fill: #5a698f;
-      }
+        .inactive-icon {
+          fill: #5a698f;
+        }
 
-      .active-icon {
-        fill: #fff;
+        .active-icon {
+          fill: #fff;
+        }
       }
-    }
-    .menu-link:hover {
-      svg {
-        fill: #fc4747;
+      .menu-link:hover {
+        svg {
+          fill: #fc4747;
+        }
       }
     }
   }
-  .menu-item:last-child {
-    margin-top: auto;
+  .avatar-img {
+    width: 4rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar {
+    position: static;
+    @include flexHr;
+    justify-content: space-between;
+    padding: 0 1.6rem 0 2.4rem;
+    height: 7.2rem;
+
+    .logo {
+      margin-bottom: 0;
+    }
+
+    .menu {
+      @include flexHr;
+      height: fit-content;
+      width: fit-content;
+      gap: 3.2rem;
+    }
+
     .avatar-img {
-      max-width: 4rem;
+      max-width: 3.2rem;
+      border-radius: 50%;
+      border: 1px solid #fff;
     }
   }
 }

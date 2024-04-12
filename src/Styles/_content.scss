@@ -2,3 +2,9 @@
   margin: 0 auto;
   max-width: 124rem;
 }
+
+@media screen and (max-width: 1420px) {
+  .content {
+    max-width: 100rem;
+  }
+}

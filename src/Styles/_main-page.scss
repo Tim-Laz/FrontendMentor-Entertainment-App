@@ -1,3 +1,38 @@
+#root {
+  margin: 0 auto;
+  padding: 3.2rem 3.6rem 5.2rem 3.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  color: $red;
+}
+
+::-webkit-scrollbar-track {
+  background: $semidarkblue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $red;
+}
+
 .main {
-  padding-left: calc(16.4rem - 3.2rem);
+  margin: 0 auto;
+  padding-left: 13.2rem;
+  .main-heading {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #root {
+    padding: 2.3rem 2.45rem 3.8rem;
+  }
+
+  .main {
+    padding: 0;
+    .main-heading {
+      margin-bottom: 2.5rem;
+    }
+  }
 }

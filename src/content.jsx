@@ -3,9 +3,8 @@ import Bookmarked from "./Bookmarked.jsx";
 import MovSeries from "./MovSeries.jsx";
 import SearchResults from "./SearchResults.jsx";
 
-export default function Content({ category }) {
-  let temp = "notsearching";
-  if (temp !== "searching") {
+export default function Content({ category, searchString }) {
+  if (!searchString) {
     return (
       <div className="content">
         {category === "home" && <Home />}
@@ -18,7 +17,7 @@ export default function Content({ category }) {
   } else {
     return (
       <div className="content">
-        <SearchResults category={category} searchString="earth" />
+        <SearchResults category={category} searchString={searchString} />
       </div>
     );
   }

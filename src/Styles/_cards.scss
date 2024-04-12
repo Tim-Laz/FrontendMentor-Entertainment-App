@@ -9,3 +9,12 @@ $semidarkblue: #161d2f;
   column-gap: 4rem;
   width: 100%;
 }
+
+@media screen and (max-width: 1420px) {
+  .cards {
+    @include grid(3);
+    row-gap: 2.4rem;
+    column-gap: 3rem;
+    width: 100%;
+  }
+}

@@ -1,12 +1,25 @@
-.trending {
+.slider {
   margin-bottom: 4rem;
+  user-select: none;
+  touch-action: pan-y;
   .trending-heading {
     margin-bottom: 2.5rem;
   }
-  .trending-cards {
-    @include flexHr;
-    gap: 4rem;
-    overflow: clip;
-    // overflow-clip-margin: 4rem;
+  .embla {
+    width: calc(100% + 3.6rem);
+    overflow: hidden;
+    .embla__container {
+      @include flexHr;
+      gap: 4rem;
+      // transition: transform 1s;
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .slider {
+    .embla {
+      width: 100%;
+    }
   }
 }

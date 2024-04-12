@@ -6,7 +6,6 @@ export default function Home() {
   const media = useMedia();
   const trendingMedia = media.filter((item) => item.isTrending);
   const normalMedia = media.filter((item) => !item.isTrending);
-  console.log(media);
   return (
     <div className="home">
       <Trending media={trendingMedia} />

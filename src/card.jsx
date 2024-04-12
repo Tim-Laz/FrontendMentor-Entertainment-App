@@ -11,7 +11,6 @@ export default function Card({
   const dispatch = useMediaDispatch();
   function toggleBookmark() {
     dispatch({ type: "bookmark", title: title });
-    console.log("toggled");
   }
 
   return (

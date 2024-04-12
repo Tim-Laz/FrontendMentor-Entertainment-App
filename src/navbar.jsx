@@ -21,12 +21,8 @@ export default function Navbar({ category, setCategory }) {
       <div className="logo">
         <img src="./assets/logo.svg" alt="" />
       </div>
-      <ul className="menu">
-        {menu}
-        <li className="menu-item">
-          <img className="avatar-img" src="./assets/image-avatar.png" alt="" />
-        </li>
-      </ul>
+      <ul className="menu">{menu}</ul>
+      <img className="avatar-img" src="./assets/image-avatar.png" alt="" />
     </nav>
   );
 }
