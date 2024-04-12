@@ -24,15 +24,49 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1210px) {
   #root {
-    padding: 2.3rem 2.45rem 3.8rem;
+    padding: 2.3rem 2.45rem 5.6rem;
+    .App {
+      max-width: 90rem;
+      margin: 0 auto;
+    }
   }
 
   .main {
     padding: 0;
     .main-heading {
       margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #root {
+    .App {
+      max-width: 71.9rem;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  #root {
+    .App {
+      max-width: 54rem;
+    }
+  }
+}
+@media screen and (max-width: 590px) {
+  #root {
+    .App {
+      max-width: 40rem;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  #root {
+    padding: 0rem 1.6rem 6.1rem;
+    .App {
+      max-width: unset;
     }
   }
 }

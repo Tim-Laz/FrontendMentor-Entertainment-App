@@ -30,7 +30,7 @@
         }
 
         .active-icon {
-          fill: #fff;
+          fill: #fff !important;
         }
       }
       .menu-link:hover {
@@ -47,7 +47,7 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1210px) {
   .navbar {
     position: static;
     @include flexHr;
@@ -70,6 +70,36 @@
       max-width: 3.2rem;
       border-radius: 50%;
       border: 1px solid #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    height: fit-content;
+    border-radius: unset;
+    padding: 1.6rem;
+    margin-left: -1.6rem;
+    width: calc(100% + 3.2rem);
+    .logo {
+      img {
+        height: 2rem;
+      }
+    }
+
+    .menu {
+      gap: 2.4rem;
+      .menu-item {
+        .menu-link {
+          svg {
+            width: 1.6rem;
+            height: 1.6rem;
+          }
+        }
+      }
+    }
+    .avatar-img {
+      width: 2.4rem;
     }
   }
 }

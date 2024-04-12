@@ -1,12 +1,14 @@
 .slider {
   margin-bottom: 4rem;
+  margin-right: calc((-100vw + 124rem + 9.6rem + 3.6rem + 6px) * 0.5);
   user-select: none;
   touch-action: pan-y;
   .trending-heading {
     margin-bottom: 2.5rem;
+    width: fit-content;
   }
   .embla {
-    width: calc(100% + 3.6rem);
+    width: 100%;
     overflow: hidden;
     .embla__container {
       @include flexHr;
@@ -18,8 +20,53 @@
 
 @media screen and (max-width: 1420px) {
   .slider {
+    margin-right: calc((-100vw + 100rem + 9.6rem + 3.2rem) * 0.5 + 5px);
+  }
+}
+@media screen and (max-width: 1210px) {
+  .slider {
+    margin-right: calc((-100vw + 90rem) * 0.5 + 5px);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .slider {
+    margin-bottom: 3.9rem;
+    margin-right: calc((-100vw + 71.9rem) * 0.5 + 5px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .slider {
+    margin-right: calc((-100vw + 54rem) * 0.5 + 5px);
     .embla {
-      width: 100%;
+      .embla__container {
+        gap: 1.6rem;
+      }
     }
+  }
+}
+@media screen and (max-width: 590px) {
+  .slider {
+    margin-right: calc((-100vw + 40rem) * 0.5 + 5px);
+    .embla {
+      .embla__container {
+        gap: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .slider {
+    margin-bottom: 2.4rem;
+    margin-right: calc((-100vw + 34.3rem) * 0.5 + 5px);
+    .trending-heading {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  .slider {
+    margin-right: calc((-100vw + 30rem) * 0.5 + 5px);
   }
 }

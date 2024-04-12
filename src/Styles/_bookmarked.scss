@@ -5,3 +5,19 @@
 .bookmarked-tv-heading {
   margin: 4rem 0 3.8rem 0;
 }
+
+@media screen and (max-width: 960px) {
+  .bookmarked-mov-heading {
+    margin-bottom: 2.4rem;
+  }
+
+  .bookmarked-tv-heading {
+    margin: 4rem 0 2.4rem 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bookmarked-tv-heading {
+    margin: 2.4rem 0;
+  }
+}

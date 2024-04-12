@@ -1,18 +1,11 @@
 import TrendingCard from "./TrendingCard";
-import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 export default function Trending({ media }) {
   const trendingMedia = media.filter((item) => item.isTrending);
   // const cardsCount = trendingMedia.length;
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: true });
-
-  useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes()); // Access API
-    }
-  }, [emblaApi]);
+  const [emblaRef] = useEmblaCarousel({ dragFree: true });
 
   return (
     <div className="slider">

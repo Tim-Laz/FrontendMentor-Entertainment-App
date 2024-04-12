@@ -26,3 +26,36 @@
   }
 }
 /* Search for movies or */
+
+@media screen and (max-width: 1420px) {
+  .searchbar-container {
+    max-width: 100rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .searchbar-container {
+    padding-top: 2.4rem;
+    margin: 0 auto 1.9rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .searchbar-container {
+    max-width: 34.3rem;
+    margin: 0 auto 1rem;
+    .searchbar {
+      .search-container {
+        gap: 1.6rem;
+        .search-icon {
+          width: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .searchbar-container {
+    max-width: 30rem;
+  }
+}

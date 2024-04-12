@@ -70,7 +70,6 @@
     border-radius: 50%;
   }
   .tr-card-descr {
-    padding-top: 0.8rem;
     position: absolute;
     bottom: 2.4rem;
     left: 2.4rem;
@@ -89,6 +88,71 @@
     .tr-card-title {
       padding-top: 0.5rem;
       text-align: left;
+    }
+  }
+  .tr-rating-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .embla__slide {
+    flex: 0 0 24rem;
+    height: 14rem;
+    .tr-bookmark-container {
+      top: 0.8rem;
+      right: 0.8rem;
+    }
+    .tr-card-descr {
+      bottom: 1.6rem;
+      left: 1.6rem;
+      .tr-card-info {
+        .tr-dot:nth-child(4) {
+          display: none;
+        }
+        gap: 0.8rem;
+        .tr-category-container {
+          gap: 0.8rem;
+        }
+        .tr-rating-desktop {
+          display: none;
+        }
+        // .tr-rating {
+        //   opacity: 1;
+        //   position: absolute;
+        //   right: -8.6rem;
+        //   transform: translate(100%, 12px);
+        // }
+        // .tr-rating::after {
+        //   content: "";
+        //   width: 3.4rem;
+        //   height: 2.1rem;
+        //   background-color: rgba(255, 255, 255, 0.15);
+        //   border-radius: 10.5px;
+        //   display: block;
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        // }
+      }
+      .tr-card-title {
+        padding-top: 0.4rem;
+        text-align: left;
+      }
+    }
+    .tr-rating-mobile {
+      opacity: 1;
+      width: 3.4rem;
+      height: 2.1rem;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 2.4rem;
+      right: 1.6rem;
+      border-radius: 10.5px;
     }
   }
 }

@@ -62,10 +62,11 @@ export default forwardRef(function TrendingCard(
             <p className="tr-category pM">{category}</p>
           </div>
           <div className="tr-dot"></div>
-          <p className="tr-rating pM">{rating}</p>
+          <p className="tr-rating tr-rating-desktop pM">{rating}</p>
         </div>
         <div className="tr-card-title hS">{title}</div>
       </div>
+      <div className="tr-rating tr-rating-mobile pM">{rating}</div>
     </div>
   );
 });

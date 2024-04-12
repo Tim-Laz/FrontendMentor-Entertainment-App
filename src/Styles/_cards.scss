@@ -6,7 +6,6 @@ $semidarkblue: #161d2f;
 .cards {
   @include grid(4);
   row-gap: 3.2rem;
-  column-gap: 4rem;
   width: 100%;
 }
 
@@ -14,7 +13,29 @@ $semidarkblue: #161d2f;
   .cards {
     @include grid(3);
     row-gap: 2.4rem;
-    column-gap: 3rem;
-    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cards {
+    row-gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 590px) {
+  .cards {
+    @include grid(2);
+    justify-content: left;
+    column-gap: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cards {
+    justify-content: space-between;
+    column-gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .cards {
+    justify-content: space-between;
+    column-gap: 1rem;
   }
 }

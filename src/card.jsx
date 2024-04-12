@@ -17,8 +17,8 @@ export default function Card({
     <div className="card">
       <div className="card-img">
         <picture className="img">
-          <source srcSet={src.large} media="(min-width: 768px)" />
-          <source srcSet={src.medium} media="(min-width: 376px)" />
+          <source srcSet={src.large} media="(min-width: 961px)" />
+          <source srcSet={src.medium} media="(min-width: 768px)" />
           <img className="img" src={src.small} alt={title} />
         </picture>
         <a href="#" className="play">

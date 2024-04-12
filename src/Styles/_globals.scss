@@ -65,7 +65,8 @@ body {
 
 @mixin grid($cols: 1) {
   display: grid;
-  grid-template-columns: repeat($cols, 1fr);
+  grid-template-columns: repeat($cols, auto);
+  justify-content: space-between;
 }
 
 @mixin flexHr {
@@ -78,4 +79,44 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .hL {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.3125px;
+    line-height: 2.5rem;
+  }
+
+  .hM {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+
+  .hS {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+  }
+  .hXS {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+  }
+
+  .pM {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    opacity: 0.75;
+  }
+
+  .pS {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    opacity: 0.75;
+  }
 }

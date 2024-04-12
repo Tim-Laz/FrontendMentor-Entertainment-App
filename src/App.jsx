@@ -6,6 +6,7 @@ import { MediaProvider } from "./MediaContext.jsx";
 
 export default function App() {
   const [category, setCategory] = useState("home");
+  console.log(category);
 
   return (
     <MediaProvider>
