@@ -3,7 +3,6 @@ import useEmblaCarousel from "embla-carousel-react";
 
 export default function Trending({ media }) {
   const trendingMedia = media.filter((item) => item.isTrending);
-  // const cardsCount = trendingMedia.length;
 
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 

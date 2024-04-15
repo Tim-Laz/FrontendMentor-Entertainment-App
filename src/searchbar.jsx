@@ -38,7 +38,7 @@ export default function SearchBar({ category, handleSearch }) {
           <div className="search-container">
             <img
               className="search-icon"
-              src="./assets/icon-search.svg"
+              src="/assets/icon-search.svg"
               alt="search"
             />
             <input

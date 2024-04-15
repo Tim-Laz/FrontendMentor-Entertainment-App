@@ -22,26 +22,3 @@ export default function Content({ category, searchString }) {
     );
   }
 }
-
-// export function Content1() {
-//   let temp = "series";
-//   return (
-//     <div className="content">
-//       {temp === "home" && <Trending />}
-//       <h1 className="hL">
-//         {temp === "home" && "Recommended for you"}
-//         {temp === "movies" && "Movies"}
-//         {temp === "series" && "Series"}
-//         {temp === "bookmarked" && "Bookmarked Movies"}
-//         {temp === "searching" && "Found 2 results for earth"}
-//       </h1>
-//       <Cards />
-//       {temp === "bookmarked" && (
-//         <>
-//           <h1 className="hL">Bookmarked Series</h1>
-//           <Cards />
-//         </>
-//       )}
-//     </div>
-//   );
-// }

@@ -1,6 +1,6 @@
 import SearchBar from "./SearchBar.jsx";
 import Content from "./Content.jsx";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Main({ category }) {
   const [searchString, setSearchString] = useState(null);
