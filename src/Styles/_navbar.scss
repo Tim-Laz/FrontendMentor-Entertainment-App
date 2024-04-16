@@ -13,7 +13,7 @@
   .menu {
     @include flexVr;
     height: 100%;
-    gap: 4rem;
+    gap: 2rem;
 
     .menu-item {
       use {
@@ -21,6 +21,8 @@
         height: 2rem;
       }
       .menu-link {
+        display: block;
+        padding: 1rem;
         svg {
           transition: all 0.5s;
         }
@@ -63,7 +65,7 @@
       @include flexHr;
       height: fit-content;
       width: fit-content;
-      gap: 3.2rem;
+      gap: 1.2rem;
     }
 
     .avatar-img {
@@ -88,9 +90,10 @@
     }
 
     .menu {
-      gap: 2.4rem;
+      gap: 1.4rem;
       .menu-item {
         .menu-link {
+          padding: 0.5rem;
           svg {
             width: 1.6rem;
             height: 1.6rem;
