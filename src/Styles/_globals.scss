@@ -65,7 +65,7 @@ body {
 
 @mixin grid($cols: 1) {
   display: grid;
-  grid-template-columns: repeat($cols, auto);
+  grid-template-columns: repeat($cols, 1fr);
   justify-content: space-between;
 }
 

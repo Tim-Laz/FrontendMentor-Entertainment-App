@@ -3,6 +3,12 @@
   max-width: 124rem;
 }
 
+@media screen and (min-width: 2000px) {
+  .content {
+    max-width: 160rem;
+  }
+}
+
 @media screen and (max-width: 1420px) {
   .content {
     max-width: 100rem;

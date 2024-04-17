@@ -1,6 +1,6 @@
 .slider {
   margin-bottom: 4rem;
-  margin-right: calc((-100vw + 124rem + 9.6rem + 3.6rem + 6px) * 0.5);
+  margin-right: calc((-100vw + 124rem + 9.6rem + 4.2rem + 6px) * 0.5);
   user-select: none;
   touch-action: pan-y;
   .trending-heading {
@@ -13,14 +13,19 @@
     .embla__container {
       @include flexHr;
       gap: 4rem;
-      // transition: transform 1s;
     }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .slider {
+    margin-right: calc((-100vw + 160rem + 9.6rem + 4.2rem) * 0.5 + 5px);
   }
 }
 
 @media screen and (max-width: 1420px) {
   .slider {
-    margin-right: calc((-100vw + 100rem + 9.6rem + 3.2rem) * 0.5 + 5px);
+    margin-right: calc((-100vw + 100rem + 9.6rem + 3.8rem) * 0.5 + 5px);
   }
 }
 @media screen and (max-width: 1210px) {

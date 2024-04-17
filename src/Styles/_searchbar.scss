@@ -25,6 +25,11 @@
     }
   }
 }
+@media screen and (min-width: 2000px) {
+  .searchbar-container {
+    max-width: 160rem;
+  }
+}
 
 @media screen and (max-width: 1420px) {
   .searchbar-container {
