@@ -1,0 +1,13 @@
+.search-results {
+  .search-results-heading {
+    margin-bottom: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .search-results {
+    .search-results-heading {
+      margin-bottom: 2.4rem;
+    }
+  }
+}

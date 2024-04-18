@@ -1,0 +1,111 @@
+@use "../../mixins";
+@use "../../variables";
+
+.navbar {
+  position: fixed;
+  @include mixins.flexVr;
+  background-color: variables.$semidarkblue;
+  padding: 3.5rem 2.8rem 3.2rem;
+  height: calc(100vh - 6.4rem);
+  border-radius: 20px;
+
+  .logo {
+    margin-bottom: 7.5rem;
+  }
+
+  .menu {
+    @include mixins.flexVr;
+    height: 100%;
+    gap: 2rem;
+
+    .menu-item {
+      use {
+        width: 2rem;
+        height: 2rem;
+      }
+      .menu-link {
+        display: block;
+        padding: 1rem;
+        svg {
+          transition: all 0.5s;
+        }
+
+        .inactive-icon {
+          fill: #5a698f;
+        }
+
+        .active-icon {
+          fill: #fff !important;
+        }
+      }
+      .menu-link:hover {
+        svg {
+          fill: #fc4747;
+        }
+      }
+    }
+  }
+  .avatar-img {
+    width: 4rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .navbar {
+    position: static;
+    @include mixins.flexHr;
+    justify-content: space-between;
+    padding: 0 1.6rem 0 2.4rem;
+    height: 7.2rem;
+
+    .logo {
+      margin-bottom: 0;
+    }
+
+    .menu {
+      @include mixins.flexHr;
+      height: fit-content;
+      width: fit-content;
+      gap: 1.2rem;
+    }
+
+    .avatar-img {
+      max-width: 3.2rem;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    height: fit-content;
+    border-radius: unset;
+    padding: 1.6rem;
+    margin-left: -1.6rem;
+    width: calc(100% + 3.2rem);
+    .logo {
+      img {
+        height: 2rem;
+      }
+    }
+
+    .menu {
+      gap: 1.4rem;
+      .menu-item {
+        .menu-link {
+          padding: 0.5rem;
+          svg {
+            width: 1.6rem;
+            height: 1.6rem;
+          }
+        }
+      }
+    }
+    .avatar-img {
+      width: 2.4rem;
+    }
+  }
+}

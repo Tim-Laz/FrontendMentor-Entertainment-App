@@ -1,0 +1,102 @@
+@use "variables";
+
+:root {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: variables.$darkblue;
+  scrollbar-gutter: stable;
+}
+
+a:link,
+a:visited {
+  text-decoration: inherit;
+  color: #ffffff;
+}
+
+body {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.hL {
+  font-size: 3.2rem;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 4rem;
+}
+
+.hM {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+.hS {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.hXS {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.3rem;
+}
+
+.pM {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.9rem;
+}
+
+.pS {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 767px) {
+  .hL {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.3125px;
+    line-height: 2.5rem;
+  }
+
+  .hM {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+
+  .hS {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+  }
+  .hXS {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+  }
+
+  .pM {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    opacity: 0.75;
+  }
+
+  .pS {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    opacity: 0.75;
+  }
+}

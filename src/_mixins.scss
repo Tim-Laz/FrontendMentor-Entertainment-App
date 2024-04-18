@@ -1,0 +1,17 @@
+@mixin grid($cols: 1) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  justify-content: space-between;
+}
+
+@mixin flexHr {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+@mixin flexVr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
